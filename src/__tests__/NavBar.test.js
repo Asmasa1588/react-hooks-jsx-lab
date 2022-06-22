@@ -1,3 +1,4 @@
+import React from "react";
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 
@@ -32,3 +33,13 @@ test("renders each <a> element with the correct attributes", () => {
   expect(about).toBeInTheDocument();
   expect(about).toHaveAttribute("href", expect.stringContaining("#about"));
 });
+
+function NavBar() {
+  return (
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+    </nav>
+  );
+}
+export default NavBar;
